@@ -1,0 +1,21 @@
+{
+  "name": "imoot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple ChatRoom Using Socket",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Brij Shyam",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.0.1",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.6.0"
+  }
+}

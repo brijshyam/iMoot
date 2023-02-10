@@ -1,0 +1,38 @@
+@mixin media-lg{
+    @media screen  and (min-width: 768px ){
+        @content;
+        
+    }
+}
+
+@include media-lg{
+    body{
+        main{
+            #response{
+                height: 90vh;
+                width: 50%;
+                .send-msg{
+                    // width: 80%;
+                    #postman{
+                        width: 36vw;
+                        .btn{
+                            left: 90%;
+                            right: 0;
+                            top: 8%;
+                            bottom:0;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        #circle1{
+            transform: scale(3);
+            top: 75%;
+        }
+        #circle2{
+            transform: scale(2);
+            left: 70%;
+        }
+    }
+}

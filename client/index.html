@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="">
+        <title>iMoot - The Debate Room</title>
+    </head>
+
+    <body>
+        <main>
+            <section class="glass response" id="response">
+                <div class="header">
+                    <img src="/img/chat.png" alt="" srcset="" class="logo">
+                    <h2>The real-time Moot Plateform</h2>
+                    <span class="ruler"></span>
+                </div>
+                <div class="message_container"></div>
+                <div class="send-msg">
+                    <form action="#" class="send_container" id="postman">
+                        <textarea placeholder="Enter a message to send..." name="messageInp" id="messageInp"></textarea>
+                        <button type="submit" id="btn" class="btn"><img src="/img/send.png" alt=""></button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <div class="circle1" id="circle1"></div>
+        <div class="circle2" id="circle2"></div>
+        <div class="circle3"></div>
+        <script defer src="http://127.0.0.1:3000/socket.io/socket.io.js">
+            //sanalone wild is exposed and connection with client is established with server
+        </script>
+        <script defer src="/js/app.js"></script>
+    </body>
+
+</html>
