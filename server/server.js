@@ -4,9 +4,13 @@ import { config } from 'dotenv';
 config();
 // const port = process.env.PORT;
 
-const io = new Server();
-io.listen(port); //it attaches itslef to an http instance
+// const io = new Server();
+// io.listen(port); //it attaches itslef to an http instance
 // console.log(`i am in initialization`);
+//LAter i am adding this at time of deployement
+const port = process.env.PORT || 3000;
+const io = new Server();
+io.listen(port);
 
 const app = express();
 app.all('/', function (req, res, next) {
