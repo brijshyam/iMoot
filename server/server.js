@@ -1,9 +1,8 @@
-import { MongoClient, ServerApiVersion } from 'mongodb';
 import { Server } from "socket.io";
 import express from 'express';
 import { config } from 'dotenv';
 config();
-const port = process.env.PORT;
+// const port = process.env.PORT;
 
 const io = new Server();
 io.listen(port); //it attaches itslef to an http instance
@@ -17,34 +16,7 @@ app.all('/', function (req, res, next) {
 });
 
 
-const uri = process.env.MONGO_URI;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-console.log(`initialization completed.....!`);
-
-
-
-
-//mongodb connection
-try {
-    console.log(`trying to connect to mongo with client`);
-    client.connect((err) => {
-        console.log(`connection started`);
-        const collection = client.db("chatDB").collection("chats");
-        console.log(`collection created....`);
-        if (err) {
-            console.error(err);
-            throw err;
-        }
-        console.log(`Mongodb connected...`);
-    });
-} catch (err) {
-    console.log(`OOPs!, was unable to make the connecton with the database!!`);
-    console.error(err);
-}
-
-
 const users = {} // creating an object for all the connectedd users
-console.log(`i am here`);
 
 // creating an instance of socket.io
 io.on('connection', socket => {
